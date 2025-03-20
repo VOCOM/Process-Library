@@ -7,14 +7,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_compile_definitions(WIN32)
 
 add_executable(${PROJECT_NAME} 
-  main.cpp 
-  pipe.cpp
-  pipe_server.cpp 
-  win_process.cpp
+  src/main.cpp 
+  src/pipe.cpp
+  src/pipe_server.cpp 
+  src/win_process.cpp
 )
 add_executable(${PROJECT_NAME}_sub 
-  subprocess.cpp 
-  pipe_client.cpp
+  src/subprocess.cpp 
+  src/pipe_client.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR})
